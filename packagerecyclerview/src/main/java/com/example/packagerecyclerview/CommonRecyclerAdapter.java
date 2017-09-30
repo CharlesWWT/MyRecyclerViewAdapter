@@ -34,7 +34,7 @@ public abstract class CommonRecyclerAdapter<T> extends RecyclerView.Adapter<View
         this.mMultiTypeSupport = multiTypeSupport;
 
     }
-
+    /** @hide */
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //多布局支持

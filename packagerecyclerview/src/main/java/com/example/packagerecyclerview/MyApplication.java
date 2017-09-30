@@ -2,6 +2,7 @@ package com.example.packagerecyclerview;
 
 import android.app.Application;
 
+import com.example.packagerecyclerview.utils.ExceptionCrashHandler;
 import com.squareup.okhttp.OkHttpClient;
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -18,5 +19,6 @@ public class MyApplication extends Application {
         OkHttpClient client =
                 OkHttpUtils.getInstance().getOkHttpClient();
         client.setConnectTimeout(100000, TimeUnit.MILLISECONDS);
+        ExceptionCrashHandler.getmInstance().init(this);
     }
 }
